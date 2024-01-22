@@ -40,7 +40,8 @@ export const startGame = () => {
 export const nextStep = (type, direction) => {
   return (dispatch, getState) => {
     dispatch(game.actions.setLoading(true));
-    fetch("https://wk16-backend.herokuapp.com/action", {
+    // fetch("https://wk16-backend.herokuapp.com/action", {
+      fetch('https://labyrinth.technigo.io/start', {
       method: "POST",
       headers: {
         "Content-type": "application/json",
